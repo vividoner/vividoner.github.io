@@ -303,7 +303,7 @@ body::-webkit-scrollbar-corner {
 	display:none;
 }
 .xdialog_css {
-	z-index:99;
+	z-index:999;
 }
 .xdialog_css .ui-dialog-titlebar {
 	background:#000;

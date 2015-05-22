@@ -1,0 +1,29 @@
+/*内容区域*/
+.cbp-spmenu {
+	background: #47a3da;/*内容区域背景色*/
+	position: fixed;
+}
+/*标题区域*/
+.cbp-spmenu h3 {
+	color: #afdefa;/*标题区域文字颜色*/
+	font-size: 18px;
+	padding: 0px;
+	margin: 0;
+	font-weight: 300;
+	background: #0d77b6;/*标题区域背景色*/
+}
+/*收缩时位置*/
+.cbp-spmenu-right {
+	right: -300px;
+}
+/*展开时位置*/
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+/* 滑入滑出效果 */
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}

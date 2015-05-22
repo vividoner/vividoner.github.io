@@ -1,0 +1,1537 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>辅助装修工具</title>
+<link rel="stylesheet" href="css/datatimepicker/jquery.ui.base.css">
+<link rel="stylesheet" href="css/datatimepicker/jquery-ui-timepicker-addon.css">
+<link rel="stylesheet" href="css/icheck_skins/_all.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.ui.resizable.css">
+<link rel="stylesheet" href="css/colorpalette.css">
+<link rel="stylesheet" href="css/modernizr.css">
+<!--[if IE 6]>
+<style>body{behavior:url(css/js/csshover3.htc);}</style>
+<script src="css/js/DD_belatedPNG.js"></script>
+<script>DD_belatedPNG.fix('.notice,.ap,.qt_bg,h1,div,span,li,img,i,em,b');</script>
+<![endif]-->
+<script src="css/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="css/js/bootstrap.js" type="text/javascript"></script>
+<script src="css/js/jquery.ui.js" type="text/javascript"></script>
+<script src="css/js/jquery.zclip.js" type="text/javascript"></script>
+<script src="css/js/jquery.icheck.js" type="text/javascript"></script>
+<script src="css/js/colorpalette.js" type="text/javascript"></script>
+<script src="css/js/spectrum.js" type="text/javascript"></script>
+<script src="css/js/jquery.ui.core.js" type="text/javascript"></script>
+<script>
+window.onload=function(){
+  var odiv=document.getElementById('thediv');
+  odiv.onmouseover=function (){startmove(0,10);}
+  odiv.onmouseout=function (){startmove(-130,-10);}
+}
+var timer=null;
+function startmove(target,speed){
+  var odiv=document.getElementById('thediv');
+  clearInterval(timer);
+  timer=setInterval(function (){
+    if(odiv.offsetLeft==target){
+      clearInterval(timer);
+    }
+    else{
+      odiv.style.left=odiv.offsetLeft+speed+'px';
+    }
+  },5)
+}
+</script>
+</head>
+<body class="main">
+<div id="thediv">
+	<span class="sm_tit">联系我们</span>
+	<div class="sm">
+		<p>有问题请咨询哦
+        	<a href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E6%B1%A4%E9%92%B0%E6%A2%85&siteid=cntaobao&status=1&charset=utf-8" target="_blank">
+				<img border="0" alt="" src="http://amos.im.alisoft.com/online.aw?v=2&uid=%E6%9C%B1%E6%B2%B9%E8%B4%B5s&site=cntaobao&s=1&charset=utf-8">
+        	</a><br>
+            <a href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E6%B1%A4%E9%92%B0%E6%A2%85&siteid=cntaobao&status=1&charset=utf-8" target="_blank">
+				<img border="0" alt="" src="http://amos.im.alisoft.com/online.aw?v=2&uid=%E6%9C%B1%E6%B2%B9%E8%B4%B5s&site=cntaobao&s=1&charset=utf-8">
+        	</a><br>
+            <a href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E6%B1%A4%E9%92%B0%E6%A2%85&siteid=cntaobao&status=1&charset=utf-8" target="_blank">
+				<img border="0" alt="" src="http://amos.im.alisoft.com/online.aw?v=2&uid=%E6%9C%B1%E6%B2%B9%E8%B4%B5s&site=cntaobao&s=1&charset=utf-8">
+        	</a><br>
+            <a href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E6%B1%A4%E9%92%B0%E6%A2%85&siteid=cntaobao&status=1&charset=utf-8" target="_blank">
+				<img border="0" alt="" src="http://amos.im.alisoft.com/online.aw?v=2&uid=%E6%9C%B1%E6%B2%B9%E8%B4%B5s&site=cntaobao&s=1&charset=utf-8">
+        	</a>
+        </p>
+	</div>
+</div>
+<div id="hd">
+  <div class="xpart"> 
+    <ul>
+	  <li class="menulist li1"> 
+        <div class="menulistitemx"> 
+          <dl> 
+          	<dd id="comsliderimage" title="制作图片轮播">轮播</dd>
+            <dd id="compocoimage" title="2个图片切换显示，还可以做出多种特效">换装秀</dd>
+            <dd id="comhotarea" title="制作一个背景上的多个可点击链接区域">热区</dd>
+            <dd id="comcart" title="生成购物车按钮">购物车</dd> 
+            <dd id="comsearch" title="制作店铺搜索框">搜索</dd>
+            <dd id="comqrcode" title="生成二维码图片">二维码</dd> 
+            <dd id="comimage" title="在背景上添加图片制作链接，还可以做出多种特效">图片</dd>   
+            <dd id="comservice" title="生成旺旺代码，可以自定义头像图片">旺旺</dd> 
+            <dd id="comwwgroup" title="生成旺旺群代码">旺旺群</dd> 
+            <dd id="comtextarea" title="在背景上设置文字">文字</dd> 
+            <dd id="comcountdown" title="生成倒计时">倒计时</dd>              
+            <dd id="comvideo" title="添加淘宝视频或FLASH">视频</dd> 
+            <dd id="comshare" title="生成宝贝分享按钮">分享</dd>              
+            <dd id="comcollection" title="生成店铺或宝贝收藏按钮">收藏</dd>              
+            <dd id="comlike" title="生成宝贝喜欢按钮">喜欢</dd> 
+            <dd id="comattention" title="生成天猫品牌关注按钮">关注</dd> 
+          </dl> 
+          <div class="clear_after"></div> 
+        </div> 
+      </li> 
+      <li class="menulist li2"><span title="设置装修模块的背景，不要超出背景范围，先设置这里">模块属性</span> 
+        <div id="MainSetting" class="menulistitem"> 
+          <div class="t"> 
+            <div class="t_min"> 
+              <div class="p2 p3">
+                <label> 店铺类型：
+                <input id="text_shoptype1" name="shoptype" type="radio" value="c" /> 
+                淘宝</label> 
+                <label>&nbsp;&nbsp;</label> 
+                <label> 
+                <input id="text_shoptype2" name="shoptype" type="radio" value="b" /> 
+                天猫</label> 
+              </div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p2">模块宽：
+                <input id="text_mainbackground_width" class="input input_w1" type="text" value=""> 
+                px，高
+                <input id="text_mainbackground_height" class="input input_w1" type="text" value=""> 
+                px</div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p2"> 背景色：
+                <input id="text_mainbackground_color" class="input input_w1_2" type="text" value=""> 
+                <input id="text_mainbackground_colorselect" style="display:none;" type="text"> 
+              </div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p2"> 背景图：
+                <input id="text_mainbackground_bg" class="input input_w3_2" type="text" value=""> 
+              </div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p2"> 背景固定：
+                <label> 
+                <input id="text_mainbackground_attachment1" type="radio" name="mainbackground_attachment" value="fixed" /> 
+                是</label> 
+                <label> 
+                <input id="text_mainbackground_attachment2" type="radio" name="mainbackground_attachment" value="scroll"/> 
+                否</label> 
+              </div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p2"> 平铺方式：
+                <label> 
+                <input id="text_mainbackground_repeat1" type="radio" name="mainbackground_repeat" value="repeat"/> 
+                平铺</label> 
+                <label> 
+                <input id="text_mainbackground_repeat3" type="radio" name="mainbackground_repeat" value="repeat-x" /> 
+                横向平铺</label> 
+                <label> 
+                <input id="text_mainbackground_repeat4" type="radio" name="mainbackground_repeat" value="repeat-y" /> 
+                纵向平铺</label> 
+                <label> 
+                <input id="text_mainbackground_repeat2" type="radio" name="mainbackground_repeat" value="no-repeat" /> 
+                不平铺</label> 
+              </div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p2"> 上下位置：
+                <label> 
+                <input id="text_mainbackground_positiony1" type="radio" name="mainbackground_positiony" value="top" /> 
+                上</label> 
+                <label> 
+                <input id="text_mainbackground_positiony2" type="radio" name="mainbackground_positiony" value="center"/> 
+                中</label> 
+                <label> 
+                <input id="text_mainbackground_positiony3" type="radio" name="mainbackground_positiony" value="bottom"/> 
+                下</label> 
+              </div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p2"> 左右位置：
+                <label> 
+                <input id="text_mainbackground_positionx1" type="radio" name="mainbackground_positionx" value="left" /> 
+                左</label> 
+                <label> 
+                <input id="text_mainbackground_positionx2" type="radio" name="mainbackground_positionx" value="center"/> 
+                中</label> 
+                <label> 
+                <input id="text_mainbackground_positionx3" type="radio" name="mainbackground_positionx" value="right"/> 
+                右</label> 
+              </div> 
+            </div> 
+            <div class="t_min"> 
+              <div class="p1">锚点名称：
+                <input id="text_mainbackground_aname" class="input input_w1_2" type="text" value=""> 
+              </div> 
+            </div> 
+            <div id="btm"></div> 
+          </div> 
+        </div> 
+      </li>
+      <li class="menulist li5"> 
+        <div class="title2">图层面板</div> 
+        <div class="menulistitem"> 
+          <ul id="ul_menulistitem"> </ul> 
+        </div> 
+      </li>
+      <li class="menulist li4"> 
+        <div class="codebtn_simple">
+          <div id="btn_preview_show" data-toggle="modal" data-target="#mymodel_preview"><span title="预览">预览效果</span></div> 
+          <div id="btn_gencode" title="导出后，复制到自定义内容区里面，保存即可"><span>导出代码</span></div> 
+          <div id="btn_decode" title="复制导出的代码恢复设置"><span>导入代码</span></div>
+		  <div class="btn_help"><a href="#" target="_blank"><span>操作教程</span></a></div>
+        </div> 
+        <div class="btn_gencode_dialog" title="导出" style="display:none;"> 
+          <textarea id="txt_gencode" name="" cols="" rows=""></textarea> 		  
+          <div class="btn"> 
+            <button id="btn_copy" title="复制代码">复制代码</button> 
+            <button id="btn_close" title="关闭" class="btn_gencode_dialog_close">关闭</button><span id="msg"/>
+          </div> 
+        </div> 
+        <div class="btn_decode_dialog" title="导入" style="display:none;"> 
+          <textarea id="txt_decode" name="" cols="" rows=""></textarea> 		  
+          <div class="btn"> 
+            <button id="btn_load" title="导入代码">导入代码</button> 
+            <button id="btn_close" title="关闭" class="btn_decode_dialog_close">关闭</button>
+          </div> 
+        </div> 
+      </li> 
+	  <li class="menulist li3"> 
+		<a class="a1" href="http://siteadmin.taobao.com" target="_blank" title="店铺装修">&nbsp;</a> 
+		<a class="a2" href="http://tu.taobao.com/manage/picList.htm" target="_blank" title="图片空间">&nbsp;</a> 
+	  </li> 
+    </ul> 
+    <div class="clear_after"></div> 
+  </div> 
+  <div class="clear_after"></div> 
+  <div id="coordline"></div> 
+</div> 
+<div id="main"> 
+  <div class="mainScroll"> </div> 
+</div> 
+<div class="model_preview" id="mymodel_preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+  <div class="preview_close" data-dismiss="modal" aria-hidden="true" title="关闭"></div> 
+  <div class="preview_content"></div> 
+</div> 
+<div id="footer"> 
+  <div class="property"> 
+    <div class="property_co"> 
+      <div id="setimages"> 
+        <div id="setimages_group" class="p1"> </div> 
+        <div id="addImages" class="p2"> 
+          <input id="imgreset" type="button" value="重置" class="btn1 input_w1_2"> 
+          <input id="imgadd" type="button" value="增加图片" class="btn1 input_w1_2" title="添加图片必须为淘宝图片空间地址，外链无效"> 
+        </div> 
+      </div> 
+    </div> 
+    <div id="xdialog" class="xdialog" style="display:none"> 
+      <div class="aw_search awe" style="display:none"> 
+        <ul class="tab_n" id="search_tab"> 
+          <li class="activex"><a href="#search_tab1" data-toggle="tab">基本设置</a></li> 
+          <li><a href="#search_tab2" data-toggle="tab">输入框</a></li> 
+          <li><a href="#search_tab3" data-toggle="tab">搜索按钮</a></li> 
+        </ul> 
+        <div class="clear_after"></div> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="search_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_search_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_search_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_search_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_search_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">背景色：</div> 
+                <div class="xinput"> 
+                  <input id="div_search_background_color" class="input2 input_w1_2" type="text" value=""> 
+                  <input id="div_search_background_colorselect" style="display:none;" type="text"> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">背景图地址：</div> 
+                <div class="xinput"> 
+                  <input id="div_search_background_img" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">首页地址：</div> 
+                <div class="xinput"> 
+                  <input id="div_search_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="search_tab2"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="txt_search_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="txt_search_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">缩进：</div> 
+                <div class="xinput"> 
+                  <input id="txt_search_pleft" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">背景色：</div> 
+                <div class="xinput"> 
+                  <input id="txt_search_background" class="input2 input_w1_2" type="text" value="" autocomplete="off"> 
+                  <input id="txt_search_background_colorselect" style="display:none;" type="text"> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体色：</div> 
+                <div class="xinput"> 
+                  <input id="txt_search_font_color" class="input2 input_w1_2" type="text" value=""> 
+                  <input id="txt_search_font_color_colorselect" style="display:none;" type="text"> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">预设搜索文字：</div> 
+                <div class="xinput"> 
+                  <input id="txt_search_value" class="input2 input_w1_2" type="text" value="2222"> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="search_tab3"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="btn_search_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="btn_search_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">背景图地址：</div> 
+                <div class="xinput"> 
+                  <input id="btn_search_background_img" class="input2 input_w3_1 " type="text" value="" autocomplete="off"> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_hotarea awe" style="display:none"> 
+        <ul class="tab_n" id="hotarea_tab"> 
+          <li class="activex"><a href="#lhotarea_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="lhotarea_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_hotarea_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_hotarea_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_hotarea_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_hotarea_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">链接地址：</div> 
+                <div class="xinput"> 
+                  <input id="txt_hotarea_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">链接提示文字：</div> 
+                <div class="xinput"> 
+                  <input id="txt_hotarea_title" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">新窗口打开：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_hotarea_target" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_countdown awe" style="display:none"> 
+        <ul class="tab_n" id="countdown_tab"> 
+          <li class="activex"><a href="#countdown_tab1" data-toggle="tab">基本设置</a></li> 
+          <li><a href="#countdown_tab2" data-toggle="tab">字体</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="countdown_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_countdown_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_countdown_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_countdown_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_countdown_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">结束时间：</div> 
+                <div class="xinput"> 
+                  <input id="txt_countdown_endtime" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">背景图地址：</div> 
+                <div class="xinput"> 
+                  <input id="txt_countdown_background_image" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">显示时间：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_countdown_d" class="" type="checkbox" value="" checked="checked"> 
+                  天
+                  <input id="checkbox_countdown_h" class="" type="checkbox" value="" checked="checked"> 
+                  时
+                  <input id="checkbox_countdown_m" class="" type="checkbox" value="" checked="checked"> 
+                  分
+                  <input id="checkbox_countdown_s" class="" type="checkbox" value="" checked="checked"> 
+                  秒 </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">显示单位：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_countdown_unit" class="input_box" type="checkbox" value="" checked="checked"> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="countdown_tab2"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体大小：</div> 
+                <div class="xinput"> 
+                  <input id="txt_countdown_font_size" class="input2 input_w2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体颜色：</div> 
+                <div class="xinput"> 
+                  <input id="txt_countdown_font_color" class="input2 input_w2" type="text" value=""> 
+                  <input id="txt_countdown_font_color_colorselect" style="display:none;" type="text"> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体：</div> 
+                <div class="xinput"> 
+                  <select id="select_countdown_font_family" class="input2 input_w2"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">数字间隔：</div> 
+                <div class="xinput"> 
+                  <input id="txt_countdown_font_margin_right" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体加粗：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_countdown_font_weight" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_service awe" style="display:none"> 
+        <ul class="tab_n" id="service_tab"> 
+          <li class="activex"><a href="#service_tab1" data-toggle="tab">基本设置</a></li> 
+          <li><a href="#service_tab2" data-toggle="tab">样式设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="service_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_service_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_service_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_service_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_service_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">旺旺帐号：</div> 
+                <div class="xinput"> 
+                  <input id="text_service_id" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">头像图片：</div> 
+                <div class="xinput"> 
+                  <input id="text_service_photo" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">显示头像：</div> 
+                <div class="xinput"> 
+                  <input id="text_service_photo_isshow" class="input2" type="checkbox" value=""  checked="checked"> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">主号分流：</div> 
+                <div class="xinput"> 
+                  <input id="text_service_isshunt" class="input2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="service_tab2"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">展示方式：</div> 
+                <div class="xinput xspan"> 
+                  <input id="text_service_style1" name="service_style" class="input2 input_w3_1" type="radio" value="1" checked="checked"> 
+                  大标
+                  <input id="text_service_style2" name="service_style" class="input2 input_w3_1" type="radio" value="2"> 
+                  小标
+                  <input id="text_service_style3" name="service_style" class="input2 input_w3_1" type="radio" value="3"> 
+                  隐藏 </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">展示位置：</div> 
+                <div class="xinput xspan"> 
+                  <input id="text_service_position1" name="service_position" class="input2" type="radio" value="1" checked="checked"> 
+                  头像下方
+                  <input id="text_service_position2" name="service_position" class="input2" type="radio" value="2"> 
+                  头像内部 </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">对齐位置：</div> 
+                <div class="xinput xspan"> 
+                  <input id="text_service_align1" name="service_align" class="input2" type="radio" value="left"> 
+                  左
+                  <input id="text_service_align2" name="service_align" class="input2" type="radio" value="center" checked="checked"> 
+                  中
+                  <input id="text_service_align3" name="service_align" class="input2" type="radio" value="right"> 
+                  右 </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_wwgroup awe" style="display:none"> 
+        <ul class="tab_n" id="wwgroup_tab"> 
+          <li class="activex"><a href="#wwgroup_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="wwgroup_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_wwgroup_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_wwgroup_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_wwgroup_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_wwgroup_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">群ID：</div> 
+                <div class="xinput"> 
+                  <input id="text_wwgroup_id" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">自定义群图片：</div> 
+                <div class="xinput"> 
+                  <input id="text_wwgroup_photo" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_textarea awe" style="display:none"> 
+        <ul class="tab_n" id="textarea_tab"> 
+          <li class="activex"><a href="#textarea_tab1" data-toggle="tab">基本设置</a></li> 
+          <li><a href="#textarea_tab2" data-toggle="tab">字体</a></li> 
+          <li><a href="#textarea_tab3" data-toggle="tab">CSS3动画设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="textarea_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_textarea_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_textarea_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_textarea_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_textarea_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">背景色：</div> 
+                <div class="xinput"> 
+                  <input id="txt_textarea_bgcolor" class="input2 input_w2" type="text" value=""> 
+                  <input id="txt_textarea_bgcolor_colorselect" style="display:none;" type="text"> 
+                </div> 
+              </div> 
+              <div class="xoneline h_auto"> 
+                <div class="xlabel">文字内容：</div> 
+                <div class="xinput"> 
+                  <textarea id="txt_textarea_content"  cols="" rows="" class="border1px input_w3_1 inputarea1"></textarea> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">点击链接：</div> 
+                <div class="xinput"> 
+                  <input id="txt_textarea_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">新窗口打开：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_textarea_target" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="textarea_tab2"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">对齐：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_textarea_font_align"> 
+                    <option value="left">居左</option> 
+                    <option value="center">居中</option> 
+                    <option value="right">居右</option> 
+                  </select> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体大小：</div> 
+                <div class="xinput"> 
+                  <input id="txt_textarea_font_size" class="input2 input_w2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体颜色：</div> 
+                <div class="xinput"> 
+                  <input id="txt_textarea_font_color" class="input2 input_w2" type="text" value=""> 
+                  <input id="txt_textarea_font_color_colorselect" style="display:none;" type="text"> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体：</div> 
+                <div class="xinput"> 
+                  <select id="select_textarea_font_family" class="input2 input_w2"> </select> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体行距：</div> 
+                <div class="xinput"> 
+                  <input id="txt_textarea_font_lineheight" class="input2 input_w2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">字体加粗：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_textarea_font_weight" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="textarea_tab3"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">动画效果：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_textarea_effect"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">动画时长：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_textarea_duration"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">是否画布触发：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_textarea_point" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_image awe" style="display:none"> 
+        <ul class="tab_n" id="image_tab"> 
+          <li class="activex"><a href="#image_tab1" data-toggle="tab">基本设置</a></li> 
+          <li><a href="#image_tab2" data-toggle="tab">CSS3动画设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="image_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_image_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_image_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_image_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_image_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">图片地址：</div> 
+                <div class="xinput"> 
+                  <input id="txt_image_image_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">&nbsp;</div> 
+                <div class="xinput"> 
+                  <input id="btn_image_fullsize" type="button" value="图片实际尺寸" class="border1px btn1"> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">点击链接：</div> 
+                <div class="xinput"> 
+                  <input id="txt_image_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">链接提示文字：</div> 
+                <div class="xinput"> 
+                  <input id="txt_image_title" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">新窗口打开：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_image_target" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="image_tab2"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">动画效果：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_image_effect"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">动画时长：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_image_duration"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">是否画布触发：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_image_point" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_pocoimage awe" style="display:none"> 
+        <ul class="tab_n" id="pocoimage_tab"> 
+          <li class="activex"><a href="#pocoimage_tab1" data-toggle="tab">基本设置</a></li> 
+          <li><a href="#pocoimage_tab2" data-toggle="tab">CSS3动画设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="pocoimage_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_pocoimage_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_pocoimage_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_pocoimage_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_pocoimage_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">正-图地址：</div> 
+                <div class="xinput"> 
+                  <input id="txt_pocoimage_po_image_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">反-图地址：</div> 
+                <div class="xinput"> 
+                  <input id="txt_pocoimage_co_image_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">反-图隐藏：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_pocoimage_co_image_hidden" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">&nbsp;</div> 
+                <div class="xinput"> 
+                  <input id="btn_poco_image_fullsize" type="button" value="图片实际尺寸" class="border1px btn1"> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">点击链接：</div> 
+                <div class="xinput"> 
+                  <input id="txt_pocoimage_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">新窗口打开：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_pocoimage_target" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="pocoimage_tab2"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">正面动画：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_pocoimage_po_effect"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">反面动画：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_pocoimage_co_effect"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">动画时长：</div> 
+                <div class="xinput"> 
+                  <select class="input2 input_w2" id="select_pocoimage_duration"> </select> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_video awe" style="display:none"> 
+        <ul class="tab_n" id="video_tab"> 
+          <li class="activex"><a href="#video_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="video_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_video_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_video_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_video_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_video_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">视频地址：</div> 
+                <div class="xinput"> 
+                  <input id="txt_video_url" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_qrcode awe" style="display:none"> 
+        <ul class="tab_n" id="qrcode_tab"> 
+          <li class="activex"><a href="#qrcode_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="qrcode_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_qrcode_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_qrcode_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">尺寸：</div> 
+                <div class="xinput"> 
+                  <input id="div_qrcode_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">二维码类型：</div> 
+                <div class="xinput xspan"> 
+                  <select class="input2 input_w2" id="qrcode_type"> 
+                    <option value="cs">淘宝店铺</option> 
+                    <option value="ci">淘宝商品</option> 
+                    <option value="bs">天猫店铺</option> 
+                    <option value="bi">天猫商品</option> 
+                    <option value="we">微淘</option> 
+                  </select> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">店铺ID：</div> 
+                <div class="xinput"> 
+                  <input id="text_shopqrcode_id" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">宝贝ID：</div> 
+                <div class="xinput"> 
+                  <input id="text_qrcode_id" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">微淘ID：</div> 
+                <div class="xinput"> 
+                  <input id="text_wetao_id" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_attention awe" style="display:none"> 
+        <ul class="tab_n" id="attention_tab"> 
+          <li class="activex"><a href="#attention_tab1" data-toggle="tab">基本设置（天猫专用）</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="attention_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_attention_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_attention_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_attention_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_attention_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">关注图片地址：</div> 
+                <div class="xinput"> 
+                  <input id="text_attention_photo" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">品牌ID：</div> 
+                <div class="xinput"> 
+                  <input id="text_attention_id" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_share awe" style="display:none"> 
+        <ul class="tab_n" id="share_tab"> 
+          <li class="activex"><a href="#share_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="share_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_share_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_share_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_share_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_share_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">分享图片：</div> 
+                <div class="xinput"> 
+                  <input id="text_share_photo" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宝贝网址：</div> 
+                <div class="xinput"> 
+                  <input id="text_share_address" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_like awe" style="display:none"> 
+        <ul class="tab_n" id="like_tab"> 
+          <li class="activex"><a href="#like_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="like_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_like_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_like_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">样式选择：</div> 
+                <div class="xinput xspan"> 
+                  <input id="text_like_skin1" name="like_skin" class="input2" type="radio" value="1"> 
+                  橙色
+                  <input id="text_like_skin2" name="like_skin" class="input2" type="radio" value="2"> 
+                  蓝色 </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宝贝网址：</div> 
+                <div class="xinput"> 
+                  <input id="text_like_address" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_collection awe" style="display:none"> 
+        <ul class="tab_n" id="collection_tab"> 
+          <li class="activex"><a href="#collection_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="collection_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_collection_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_collection_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_collection_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_collection_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">收藏图片：</div> 
+                <div class="xinput"> 
+                  <input id="text_collection_photo" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">收藏网址：</div> 
+                <div class="xinput" title="店铺收藏网址或者是宝贝收藏网址"> 
+                  <input id="text_collection_address" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_cart awe" style="display:none"> 
+        <ul class="tab_n" id="cart_tab"> 
+          <li class="activex"><a href="#cart_tab1" data-toggle="tab">基本设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="cart_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_cart_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_cart_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_cart_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_cart_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">购物车图片：</div> 
+                <div class="xinput"> 
+                  <input id="text_cart_photo" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宝贝网址：</div> 
+                <div class="xinput"> 
+                  <input id="text_cart_address" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="aw_sliderimage awe" style="display:none"> 
+        <ul class="tab_n" id="sliderimage_tab"> 
+          <li class="activex"><a href="#sliderimage_tab1" data-toggle="tab">基本设置</a></li> 
+          <li><a href="#sliderimage_tab2" data-toggle="tab">箭头</a></li> 
+          <li><a href="#sliderimage_tab3" data-toggle="tab">风格设置</a></li> 
+        </ul> 
+        <div class="tab_c scrollbar"> 
+          <div class="tab_pane fade in activex" id="sliderimage_tab1"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左侧距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_sliderimage_left" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">顶部距离：</div> 
+                <div class="xinput"> 
+                  <input id="div_sliderimage_top" class="input2 input_w1_2"> 
+                  px </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">宽度：</div> 
+                <div class="xinput"> 
+                  <input id="div_sliderimage_width" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">高度：</div> 
+                <div class="xinput"> 
+                  <input id="div_sliderimage_height" class="input2 input_w1_2" type="text" value=""> 
+                  px</div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">&nbsp;</div> 
+                <div class="xinput"> 
+                  <input id="btn_sliderimage_fullsize" type="button" value="实际尺寸" class="border1px btn1"> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <button id="btn_setImages" class="setbtn border1px"> + 添加轮播图片</button> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="sliderimage_tab2"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">显示箭头：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_sliderimage_display_arrows" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">左箭头图片：</div> 
+                <div class="xinput" title="宽40px，高40px"> 
+                  <input id="txt_sliderimage_arrows_l_image" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">坐标：</div> 
+                <div class="xinput xspan"> 
+                  <input id="txt_sliderimage_arrows_l_left" class="input2 input_w1" type="text" value=""> 
+                  ,
+                  <input id="txt_sliderimage_arrows_l_top" class="input2 input_w1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">右箭头图片：</div> 
+                <div class="xinput" title="宽40px，高40px"> 
+                  <input id="txt_sliderimage_arrows_r_image" class="input2 input_w3_1" type="text" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">坐标：</div> 
+                <div class="xinput xspan"> 
+                  <input id="txt_sliderimage_arrows_r_left" class="input2 input_w1" type="text" value=""> 
+                  ,
+                  <input id="txt_sliderimage_arrows_r_top" class="input2 input_w1" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="tab_pane fade" id="sliderimage_tab3"> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">新窗口打开：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_sliderimage_target" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">自动轮播：</div> 
+                <div class="xinput"> 
+                  <input id="checkbox_sliderimage_auto_display" class="input2 input_w1_2" type="checkbox" value=""> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">轮播样式：</div> 
+                <div class="xinput xspan"> 左右
+                  <input id="checkbox_sliderimage_display_style1" name="checkbox_sliderimage_display_style" class="input2" type="radio" value="1" checked="checked"> 
+                  上下
+                  <input id="checkbox_sliderimage_display_style2" name="checkbox_sliderimage_display_style" class="input2" type="radio" value="2"> 
+                  渐变
+                  <input id="checkbox_sliderimage_display_style3" name="checkbox_sliderimage_display_style" class="input2" type="radio" value="3"> 
+                </div> 
+              </div> 
+              <div class="xoneline"> 
+                <div class="xlabel">轮播动画：</div> 
+                <div class="xinput"> 
+                  <select name="easing" class="input2 input_w2" id="select_sliderimage_effect"> </select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="xpart"> 
+              <div class="xoneline"> 
+                <div class="xlabel">轮播时长：</div> 
+                <div class="xinput"> 
+                  <input id="txt_sliderimage_interval" class="input2 input_w1_2" type="text" value=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div><script src="css/js/jquery.ui.resizable.js" type="text/javascript"></script> 
+</body>
+</html>
+<script src="http://a.tbcdn.cn/apps/pamirsshop/wiki/scripts/prettify.js" type="text/javascript"> </script>
+<script src="http://a.tbcdn.cn/s/kissy/1.1.6/kissy.js"></script>
+<script src="http://a.tbcdn.cn/s/kissy/1.1.6/seed-min.js"></script>
+<script src="http://a.tbcdn.cn/p/shop/1.0/mods/s/countdown/countdown-min.js"></script>
+<script src="http://a.tbcdn.cn/apps/pamirsshop/wiki/scripts/wiki.js"></script>

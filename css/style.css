@@ -78,7 +78,7 @@ body::-webkit-scrollbar-corner {
 	height:22px;
 	line-height:22px;
 	margin-bottom:5px;
-	margin-left:6px;
+	margin-left:5px;
 	padding:0 6px;
 	cursor:pointer;
 	color:#fff;
@@ -179,7 +179,7 @@ body::-webkit-scrollbar-corner {
 	background:#393F48;
 }
 #hd .xpart li.li3 {
-	float:right;
+	float:left;
 }
 #hd .xpart li.selected.li3 {
 	background:none;

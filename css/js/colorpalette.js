@@ -16,3 +16,4 @@ function getColorPalette(id, color, text) {
         }
     })
 }
+
